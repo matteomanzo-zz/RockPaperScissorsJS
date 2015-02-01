@@ -17,4 +17,5 @@ describe('Game', function() {
       expect(game.player2).not.toBe(null);
     });
   });
+
 });
