@@ -3,7 +3,8 @@ var Player = function(name) {
 };
 
   Player.prototype.picks = function(pick) {
-    return this.pick = pick
+    this.pick = pick
+    return this.pick
   };
 
 
@@ -11,24 +12,24 @@ var Computer = function() {
   this.name = 'CPU';
 };
 
-Computer.prototype.picks = function() {
+  Computer.prototype.picks = function() {
 
-  var CPUchoice = Math.random()
+    var CPUchoice = Math.random()
 
-  var randomPick = function() {
+    var randomPick = function() {
 
-    if (CPUchoice < 0.33) {
-      return 'rock';
-    }
+      if (CPUchoice < 0.33) {
+        return 'rock';
+      }
 
-    else if (CPUchoice > 0.33 && CPUchoice < 0.66) {
-      return 'paper';
-    }
+      else if (CPUchoice > 0.33 && CPUchoice < 0.66) {
+        return 'paper';
+      }
 
-    else {
-      return 'scissors';
-    }
-  };
-    this.pick = randomPick();
-    return this.pick
+      else {
+        return 'scissors';
+      }
+    };
+      this.pick = randomPick();
+      return this.pick
 };
