@@ -38,19 +38,29 @@ describe('Computer', function() {
 
   describe('picks a random option', function() {
 
-    it('should pick rock when generates a number smaller than 0.33', function() {
-      spyOn(Math, 'random').and.returnValue('0.25');
+    it('should pick rock when generates a number smaller than 0.20', function() {
+      spyOn(Math, 'random').and.returnValue('0.15');
       expect(computer.picks()).toEqual('rock');
     });
 
-    it('should pick paper when generates a number between 0.33 and 0.66', function() {
-      spyOn(Math, 'random').and.returnValue('0.50');
+    it('should pick paper when generates a number between 0.20 and 0.40', function() {
+      spyOn(Math, 'random').and.returnValue('0.30');
       expect(computer.picks()).toEqual('paper');
     });
 
-    it('should pick scissors when generates a number bigger than 0.66', function() {
-      spyOn(Math, 'random').and.returnValue(0.80);
+    it('should pick scissors when generates a number between 0.40 and 0.60', function() {
+      spyOn(Math, 'random').and.returnValue(0.50);
       expect(computer.picks()).toEqual('scissors');
+    });
+
+    it('should pick lizard when generates a number between 0.60 and 0.80', function() {
+      spyOn(Math, 'random').and.returnValue(0.70);
+      expect(computer.picks()).toEqual('lizard');
+    });
+
+    it('should pick spock when generates a number bigger than 0.80', function() {
+      spyOn(Math, 'random').and.returnValue(0.90);
+      expect(computer.picks()).toEqual('spock');
     });
 
   });

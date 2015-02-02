@@ -98,6 +98,20 @@ describe('Game', function() {
 
     });
 
+    describe('has verbs to declare the winner', function() {
+
+      it('should say crushes when the rock beats scissors', function() {
+        spyOn(Math, 'random').and.returnValue('0.70');
+        expect(game._victoryVerb(player.picks('rock'), computer.picks())).toEqual('crushes');
+      });
+
+      it('should say decapitates when the scissors beats the lizard', function() {
+        spyOn(Math, 'random').and.returnValue('');
+        expect(game._victoryVerb(player.picks('scissors'), computer.picks())).toEqual('crushes');
+      });
+
+    });
+
   });
 
 });

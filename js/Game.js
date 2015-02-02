@@ -1,9 +1,11 @@
 var Game = function(player1, player2) {
 
   this.PAIRS = {
-    rock: {beats: 'scissors'},
-    scissors: {beats: 'paper'},
-    paper: {beats: 'rock'}
+    'rock': {scissors: 'crushes', lizard: 'squashes'},
+    'paper': {rock: 'covers', spock: 'disproves'},
+    'scissors': {paper: 'cuts', lizard: 'decapitates'},
+    'spock': {rock: 'vapourises', scissors: 'breaks'},
+    'lizard': {spock: 'poisons', paper: 'eats'}
   };
 
   this.player1 = player1
@@ -23,4 +25,8 @@ Game.prototype.declareWinner = function(pick1, pick2) {
   else if (pick1 === pick2) {
     return 'tied'
   }
+};
+
+Game.prototype._victoryVerb = function(pick, opponentPick) {
+  return this.PAIRS[pick][opponentPick];
 };
