@@ -14,19 +14,24 @@ var Game = function(player1, player2) {
 };
 
 Game.prototype.declareWinner = function(pick1, pick2) {
-  if (this.PAIRS[pick2]['beats'] === pick1) {
-    return this.player2;
-  }
-
-  else if (this.PAIRS[pick1]['beats'] === pick2) {
+  if (this._victoryVerb(pick1, pick2)) {
     return this.player1;
   }
 
-  else if (pick1 === pick2) {
+  else if (this._samePick(pick1, pick2)) {
     return 'tied'
   }
+
+  else  {
+    return this.player2;
+  }
+
 };
 
 Game.prototype._victoryVerb = function(pick, opponentPick) {
   return this.PAIRS[pick][opponentPick];
+};
+
+Game.prototype._samePick = function(pick1, pick2) {
+  return pick1 === pick2;
 };

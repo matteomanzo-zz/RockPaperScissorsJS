@@ -37,6 +37,7 @@ var Computer = function() {
       else if (CPUchoice > 0.80) {
         return 'spock';
       }
+      
     };
       this.pick = randomPick();
       return this.pick
