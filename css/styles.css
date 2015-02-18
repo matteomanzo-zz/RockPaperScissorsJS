@@ -1,0 +1,38 @@
+.box-container {
+	position: relative;
+	display: inline-block;
+	height: 9%;
+	width: 12%;
+	border-radius: 100%;
+	border: 2px solid black;
+	margin-left: 5px;
+	margin-top: 5px;
+	text-align: center;
+}
+
+#main {
+	width: 90%;
+	margin: 0 auto;
+}
+
+#header {
+	text-align: center;
+	height: 25%;
+}
+
+.images {
+	margin-top: 5%;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+	text-align: center;
+}
+
+.results {
+	margin-top: 9%;
+	background-color: green;
+}
+
+form {
+	margin-top: 8%;
+}

@@ -40,21 +40,3 @@ Game.prototype._victoryVerb = function(pick, opponentPick) {
 Game.prototype._samePick = function(pick1, pick2) {
   return pick1 === pick2;
 };
-
-// Game.prototype._victoryMessage = function() {
-//   var message;
-//
-//   if (this.declareWinner() === player1) {
-//     message = [player1.name, this._victoryVerb(player1.pick, player2.pick), player2.name].join(' ');
-//   }
-//
-//   else if (this.declareWinner() === player2) {
-//     message = [player1.name, this._victoryVerb(player2.pick, player1.pick), player1.name].join(' ');
-//   }
-//
-//   else {
-//     message = 'Draw';
-//   }
-//
-//   return message;
-// };

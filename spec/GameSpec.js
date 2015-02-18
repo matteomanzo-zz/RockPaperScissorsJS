@@ -262,12 +262,6 @@ describe('Game', function() {
         expect(game._victoryVerb(player.picks('spock'), computer.picks())).toEqual('bends');
       });
 
-      // it('should print the message', function() {
-      //   spyOn(Math, 'random').and.returnValue('0.45');
-      //   game._victoryVerb(player.picks('spock'), computer.picks());
-      //   expect(game._victoryMessage()).toEqual('Matt bends CPU');
-      // });
-
     });
 
   });
