@@ -5,7 +5,8 @@ describe('Game', function() {
   var computer;
 
   beforeEach(function() {
-    player = new Player('Matt');
+    player = new Player();
+    player.setName('Matt');
     computer = new Computer();
     game = new Game(player, computer);
   });

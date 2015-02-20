@@ -3,8 +3,8 @@
   <head>
     <title>RPSLS</title>
     <meta charset='utf-8'>
-    <link rel='stylesheet' href='css/normalize.css'>
-    <link rel='stylesheet' href='css/styles.css'>
+    <link rel='stylesheet' href='public/css/normalize.css'>
+    <link rel='stylesheet' href='public/css/styles.css'>
   </head>
   <body>
     <section id='main'>
@@ -13,18 +13,19 @@
           <h1>Rock, Paper, Scissors, Lizard, Spock!</h1>
         </section>
         <section id='name_box'>
-          <form>
-            Name: <input type="text" name="name">
+          <form id='add-name'>
+            Name: <input id='name' type="text" name="name">
             <input type="submit" value="Enter">
           </form>
+          <h3 id='player'></h3>
         </section>
       </section>
       <section class='images'>
-        <section class='box-container'>rock</section>
-        <section class='box-container'>paper</section>
-        <section class='box-container'>scissors</section>
-        <section class='box-container'>lizard</section>
-        <section class='box-container'>spock</section>
+        <section class='box-container' id='rock'></section>
+        <section class='box-container' id='paper'></section>
+        <section class='box-container' id='scissors'></section>
+        <section class='box-container' id='lizard'></section>
+        <section class='box-container' id='spock'></section>
       </section>
       <section class='results'>
       a
@@ -33,5 +34,6 @@
     <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
     <script src="js/Game.js"></script>
     <script src="js/Player.js"></script>
+    <script src='js/interface.js'></script>
   </body>
 </html>

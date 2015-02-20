@@ -1,6 +1,10 @@
-var Player = function(name) {
-  this.name = name
+var Player = function() {
+
 };
+
+  Player.prototype.setName = function(name) {
+    this.name = name
+  }
 
   Player.prototype.picks = function(pick) {
     this.pick = pick

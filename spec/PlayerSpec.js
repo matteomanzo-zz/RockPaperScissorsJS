@@ -3,7 +3,8 @@ describe('Player', function() {
   var player;
 
   beforeEach(function() {
-    player = new Player('Matt');
+    player = new Player();
+    player.setName('Matt');
   });
 
   describe('by default', function() {

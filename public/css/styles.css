@@ -1,0 +1,72 @@
+.box-container {
+	position: relative;
+	display: inline-block;
+	height: 20%;
+	width: 24%;
+	border-radius: 100%;
+	border: 2px solid black;
+	margin-left: 2%;
+	/*margin-top: 2%;*/
+	text-align: center;
+}
+
+#main {
+	width: 90%;
+	margin: 0 auto;
+}
+
+#header {
+	text-align: center;
+	height: 20%;
+}
+
+.images {
+/*	margin-top: 5%;*/
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+	text-align: center;
+}
+
+.results {
+	margin-top: 7%;
+	background-color: green;
+}
+
+#add-name {
+	margin-top: 4%;
+}
+
+#player {
+	margin-top: 4%;
+}
+
+#rock {
+	background-image: url('../images/rock.png');
+	background-position: center;
+	background-size: 85.5%;
+}
+
+#paper {
+	background-image: url('../images/toilet-paper.jpg');
+	background-position: center;
+	background-size: 145%;
+}
+
+#scissors {
+	background-image: url('../images/scissors.jpg');
+	background-position: center;
+	background-size: 155%;
+}
+
+#lizard {
+	background-image: url('../images/lizard.png');
+	background-position: center;
+	background-size: 120%;
+}
+
+#spock {
+	background-image: url('../images/Spock.jpg');
+	background-position: center;
+	background-size: 120%;
+}
