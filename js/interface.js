@@ -12,6 +12,16 @@ $(document).ready(function() {
     $('#player').append(name);
   });
 
+  var selectItems = function() {
+      var picked = $(this).data('id');
+      player.picks(picked);
+      $('#player').append(picked);
+  };
+
+  $('.box-container').click(function() {
+    $('#player').append(this);
+  });
+
 
 
 });
