@@ -12,16 +12,12 @@ $(document).ready(function() {
     $('#player').append(name);
   });
 
-  var selectItems = function() {
-      var picked = $(this).data('id');
-      player.picks(picked);
-      $('#player').append(picked);
-  };
-
   $('.box-container').click(function() {
-    $('#player').append(this);
+    var id = $(this).attr('id');
+    var PlayerId = player.picks(id);
+    var CPUid = CPU.picks();
+    var result = game.declareWinner(PlayerId, CPUid);
+    $('#results').append(result);
   });
-
-
 
 });
