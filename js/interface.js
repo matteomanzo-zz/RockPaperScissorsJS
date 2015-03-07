@@ -17,7 +17,7 @@ $(document).ready(function() {
     var PlayerId = player.picks(id);
     var CPUid = CPU.picks();
     var result = game.declareWinner(PlayerId, CPUid);
-    $('#results').append(result);
+    $('#results').text(result);
   });
 
 });
